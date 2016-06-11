@@ -1,1 +1,10 @@
+# Ignore everything
+*
+
+# Except git/puphet related files
+!.gitattributes
+!.gitignore
+!puphet
+!README.md
+!index.php
 puphpet/config-custom.yaml
