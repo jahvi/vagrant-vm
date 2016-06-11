@@ -228,7 +228,9 @@ php:
             - gd
             - curl
             - mbstring
-        pear: {  }
+            - soap
+        pear:
+            - SOAP
         pecl:
             - zip
     ini:
