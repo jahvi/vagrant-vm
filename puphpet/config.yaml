@@ -175,7 +175,7 @@ apache:
         version: 2.4
         user: www-data
         group: www-data
-        default_vhost: true
+        default_vhost: false
         manage_user: false
         manage_group: false
         sendfile: 0
@@ -237,9 +237,7 @@ php:
             - gd
             - mbstring
             - imagick
-            - soap
-        pear:
-            - soap
+        pear: {}
         pecl:
             - zip
     ini:
@@ -256,7 +254,6 @@ php:
                 listen: '127.0.0.1:9000'
                 security.limit_extensions: .php
                 group: www-data
-                'user = www-data': '0'
                 user: www-data
     composer: '1'
     composer_home: ''
@@ -377,7 +374,7 @@ mongodb:
         version: 2.6.0
     databases: {  }
 redis:
-    install: '1'
+    install: '0'
     settings:
         port: '6379'
 sqlite:

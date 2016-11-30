@@ -16,14 +16,12 @@ Base local development config for Vagrant VM
 - gd
 - curl
 - mbstring
-- soap
 - zip
 
 ## Misc Modules
 
 - XDebug
 - Blackfyre
-- Redis
 - Mailhog (accesible at servername:8025)
 
 ## Extending config settings
