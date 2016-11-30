@@ -5,8 +5,8 @@ Base local development config for Vagrant VM
 ## LAMP Stack
 
 - Apache 2.4
-- PHP 7.0
-- MariaDB 10.1
+- PHP 5.6
+- MySQL 5.7
 
 ## PHP Modules
 
@@ -22,6 +22,7 @@ Base local development config for Vagrant VM
 ## Misc Modules
 
 - XDebug
+- Blackfyre
 - Redis
 - Mailhog (accesible at servername:8025)
 
