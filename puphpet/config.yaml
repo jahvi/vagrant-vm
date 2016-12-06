@@ -19,13 +19,13 @@ vagrantfile:
                         check_guest_tools: 0
                         update_guest_tools: 0
                 machines:
-                    vflm_14h7cn2sbh3w:
+                    vflm_84boa00d5wb7:
                         id: mediadev
                         hostname: medialounge.dev
                         network:
                             private_network: 192.168.56.101
                             forwarded_port:
-                                vflmnfp_uxxu87zzoj1x:
+                                vflmnfp_h8iigo4yzfyv:
                                     host: '7425'
                                     guest: '22'
                         memory: '2048'
@@ -40,7 +40,7 @@ vagrantfile:
                     - '--verbose'
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
         synced_folder:
-            vflsf_fyataxb73sku:
+            vflsf_hpl25n3s0kgx:
                 source: ./
                 target: /var/www
                 sync_type: nfs
@@ -119,7 +119,7 @@ nginx:
         names_hash_bucket_size: 128
     upstreams: {  }
     vhosts:
-        nxv_697rj2k9e379:
+        nxv_yld3c1kh97ir:
             server_name: awesome.dev
             server_aliases:
                 - www.awesome.dev
@@ -135,7 +135,7 @@ nginx:
             rewrite_to_https: '1'
             spdy: '1'
             locations:
-                nxvl_fpw97f7dhywl:
+                nxvl_yhafqueaault:
                     www_root: ''
                     location: /
                     index_files:
@@ -151,7 +151,7 @@ nginx:
                     fastcgi_split_path: ''
                     proxy: ''
                     proxy_redirect: ''
-                nxvl_6m0m9gznu2tg:
+                nxvl_ot6aouh6vp8u:
                     www_root: ''
                     location: '~ \.php$'
                     try_files:
@@ -175,7 +175,7 @@ apache:
         version: 2.4
         user: www-data
         group: www-data
-        default_vhost: false
+        default_vhost: true
         manage_user: false
         manage_group: false
         sendfile: 0
@@ -183,7 +183,7 @@ apache:
         - proxy_fcgi
         - rewrite
     vhosts:
-        av_e2efam81tcmf:
+        av_rm4lvkymem17:
             servername: medialounge.dev
             docroot: /var/www
             port: '80'
@@ -200,7 +200,7 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_0qfqjrjdz5u5:
+                avd_x6y7lnb5igtv:
                     path: /var/www
                     options:
                         - Indexes
@@ -212,7 +212,7 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_v98oh9wnk3ol:
+                        avdfm_u8rs5wkg5rpw:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
@@ -237,7 +237,7 @@ php:
             - gd
             - mbstring
             - imagick
-        pear: {}
+        pear: {  }
         pecl:
             - zip
     ini:
@@ -248,7 +248,7 @@ php:
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
-        phpfp_8cn2q133g0oe:
+        phpfp_8jb264dsn51u:
             ini:
                 prefix: www
                 listen: '127.0.0.1:9000'
@@ -291,7 +291,7 @@ drush:
 ruby:
     install: '1'
     versions:
-        rv_4mpi9q3jbpje:
+        rv_s2xy6tl8blz0:
             default: '1'
             bundler: '1'
             version: 2.3.1
@@ -330,15 +330,15 @@ mariadb:
         override_options: {  }
     adminer: 0
     users:
-        mariadbnu_6nhsz68l9q45:
+        mariadbnu_yyu62nya5ly5:
             name: dbuser
             password: '123'
     databases:
-        mariadbnd_qz0biu2mu4d5:
+        mariadbnd_d8djqw9drvt7:
             name: dbname
             sql: ''
     grants:
-        mariadbng_169zg32v94vo:
+        mariadbng_iqlshhwky0mj:
             user: dbuser
             table: '*.*'
             privileges:
@@ -413,7 +413,7 @@ elastic_search:
         version: 2.3.1
         java_install: true
     instances:
-        esi_pg7zsyv1imob:
+        esi_s931kbvdjm3e:
             name: es-01
 solr:
     install: '0'
