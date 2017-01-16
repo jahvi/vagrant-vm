@@ -360,7 +360,7 @@ mysql:
         root_password: root
         override_options:
             mysqld:
-                bind-address: 192.168.56.101
+                bind-address: 0.0.0.0
     adminer: 0
     users: {  }
     databases: {  }
