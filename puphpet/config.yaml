@@ -28,6 +28,9 @@ vagrantfile:
                                 vflmnfp_h8iigo4yzfyv:
                                     host: '7425'
                                     guest: '22'
+                                vflmnfp_hdsad4yzfyv:
+                                    host: '3306'
+                                    guest: '3306'
                         memory: '2048'
                         cpus: '1'
         provision:
@@ -182,16 +185,22 @@ apache:
     modules:
         - proxy_fcgi
         - rewrite
+        - expires
+        - headers
+        - vhost_alias
+        - deflate
     vhosts:
-        av_rm4lvkymem17:
+        zzzzzzzzzzzzzz:
             servername: medialounge.dev
+            serveraliases:
+                - '*.medialounge.dev'
             docroot: /var/www
             port: '80'
             setenv:
                 - 'MAGE_IS_DEVELOPER_MODE 1'
             setenvif:
                 - 'Authorization "(.*)" HTTP_AUTHORIZATION=$1'
-            custom_fragment: ''
+            custom_fragment: /vagrant/puphpet/stdev
             ssl: '0'
             ssl_cert: ''
             ssl_key: ''
@@ -226,7 +235,7 @@ letsencrypt:
 php:
     install: '1'
     settings:
-        version: '5.6'
+        version: '5.5'
     modules:
         php:
             - cli
@@ -346,9 +355,11 @@ mariadb:
 mysql:
     install: '1'
     settings:
-        version: '5.7'
+        version: '5.6'
         root_password: root
-        override_options: {  }
+        override_options:
+            mysqld:
+                bind-address: 192.168.56.101
     adminer: 0
     users: {  }
     databases: {  }
